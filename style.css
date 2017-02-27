@@ -1,0 +1,156 @@
+/*
+  Theme Name: Mirror and Glass Theme
+  Author: Daniel Cortes
+  Author URI: http://dancortes.com
+  Description: Theme developed for MediaFuel
+  Version: 1.0
+*/
+
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  background: url('/wp-content/themes/mirror_glass/assets/img/tile.jpg') top left repeat;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-weight: bold;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+}
+
+a {
+  color: #000000;
+}
+
+a#gallery {
+  color: white;
+  font-size: 24px;
+}
+
+/*Non-Bootstrap CSS*/
+
+.content-region-1, .content-region-2, .content-region-3 {
+  text-align: center;
+}
+
+#customer-testimonial {
+  background: #3e4249;
+  color: white;
+}
+
+#showroom {
+  text-align: center;
+}
+
+.btn-danger {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.btn-default {
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+}
+
+.col-centered {
+  display: inline-block;
+  float: none;
+}
+
+.container {
+  max-width: 1020px;
+}
+
+.navbar-default {
+    background-color: white;
+    margin-bottom: 0;
+}
+
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header h3 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  line-height: 40px;
+}
+
+.carousel-image {
+    margin: 0 auto;
+}
+
+p {
+  margin-top: 4px;
+}
+
+a.link {
+  font-size: 20px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a.btn-default:hover {
+  text-decoration: none;
+}
+
+.fa {
+  font-size: 98px;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  opacity: 0.1;
+}
+
+.facebook-page {
+  position: relative;
+  line-height: -0.8;
+}
+
+.col-xl-2 {
+  margin: 0 30px 30px;
+}
+
+#indy-glass {
+  background: white;
+}
+
+.footer {
+  padding-top: 19px;
+  text-align: center;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.content-region-4 {
+	background: #000000;
+	color: #ffffff;
+}
+
+.side-widget {
+  margin-bottom: 40px;
+}
+
+.side-widget h3 {
+  border-left: 5px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+/*==== MEDIA QUERIES ====*/
+
+@media screen and (max-width: 991px) {
+  .img-rounded {
+     margin: 12px;
+  }
+}
