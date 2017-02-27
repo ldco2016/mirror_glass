@@ -32,6 +32,30 @@ a#gallery {
   font-size: 24px;
 }
 
+.badge.social {
+  font-size: 24px;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  margin: 0 5px 20px 0;
+  padding: 0;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.badge.social.twitter {
+  background-color: #00aced;
+}
+
+.badge.social.pinterest {
+  background-color: #cb2027;
+}
+
+.badge.social.facebook {
+  background-color: #3b5998;
+}
+
 /*Non-Bootstrap CSS*/
 
 .content-region-1, .content-region-2, .content-region-3 {
@@ -106,10 +130,8 @@ a.btn-default:hover {
 }
 
 .fa {
-  font-size: 98px;
-  margin-top: 10px;
+  font-size: 24px;
   margin-bottom: -10px;
-  opacity: 0.1;
 }
 
 .facebook-page {
@@ -118,7 +140,7 @@ a.btn-default:hover {
 }
 
 .col-xl-2 {
-  margin: 0 30px 30px;
+  text-align: center;
 }
 
 #indy-glass {

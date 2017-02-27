@@ -8,7 +8,7 @@ $indianapolis_feature_title = get_field('indianapolis_feature_title');
 $indianapolis_feature_body = get_field('indianapolis_feature_body');
 $social_media_image = get_field('social_media_image');
 $social_media_title = get_field('social_media_title');
-$social_media_images = get_field('social_media_images');
+$social_media_feature_body = get_field('social_media_feature_body');
 
 ?>
 
@@ -95,7 +95,7 @@ $social_media_images = get_field('social_media_images');
       <!-- Three columns of text below the carousel -->
       <section class="row content-region-1 pt40 pb40">
         <div class="container">
-
+          
           <?php $loop = new WP_Query(array('post_type' => 'images_feature','orderby' => 'post_id', 'order' => 'ASC')); ?>
           <?php while($loop->have_posts()) : $loop->the_post(); ?>
           <div class="col-xl-2 col-centered">
@@ -158,7 +158,7 @@ $social_media_images = get_field('social_media_images');
           </div>
               <h2><?php echo $social_media_title; ?></h2>
               <hr />
-              <?php $loop = new WP_Query(array('post_type' => 'social_media_images','orderby' => 'post_id', 'order' => 'ASC')); ?>
+              <?php $loop = new WP_Query(array('post_type' => 'social_media_feature','orderby' => 'post_id', 'order' => 'ASC')); ?>
               <?php while($loop->have_posts()) : $loop->the_post(); ?>
               <div class="col-lg-2 col-centered">
                 <?php
@@ -166,8 +166,9 @@ $social_media_images = get_field('social_media_images');
                     the_post_thumbnail();
                   }
                 ?>
-              </div><!-- /.col-lg-2 -->
               <?php endwhile; ?>
+              </div><!-- /.col-lg-2 -->
+              
               <p><a href="#" class="link">See more on Facebook &raquo;</a></p>
           </div>
       </section>
