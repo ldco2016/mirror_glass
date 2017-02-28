@@ -20,7 +20,11 @@ h1,h2,h3,h4,h5,h6 {
   text-rendering: optimizeLegibility;
   font-weight: bold;
   font-family: "Comic Sans MS", cursive, sans-serif;
-  text-align: center;
+}
+
+.thumbnail {
+  background: url('/wp-content/themes/mirror_glass/assets/img/tile.jpg');
+  border: none;
 }
 
 a {
@@ -58,10 +62,6 @@ a#gallery {
 
 /*Non-Bootstrap CSS*/
 
-.content-region-1, .content-region-2, .content-region-3 {
-  text-align: center;
-}
-
 #customer-testimonial {
   background: #3e4249;
   color: white;
@@ -84,13 +84,12 @@ a#gallery {
   font-size: 24px;
 }
 
-.col-centered {
-  display: inline-block;
-  float: none;
-}
-
 .container {
   max-width: 1020px;
+}
+
+#image-features {
+  text-align: center;
 }
 
 .navbar-default {
@@ -137,10 +136,6 @@ a.btn-default:hover {
 .facebook-page {
   position: relative;
   line-height: -0.8;
-}
-
-.col-xl-2 {
-  text-align: center;
 }
 
 #indy-glass {

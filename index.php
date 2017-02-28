@@ -2,13 +2,13 @@
 
 // Advanced Custom Fields
 // this is a bunch of variables with our fields to echo out in PHP
-$images_feature_title = get_field('images_feature_title');
-$images_feature_body = get_field('images_feature_body');
+$images_feature_title       = get_field('images_feature_title');
+$images_feature_body        = get_field('images_feature_body');
 $indianapolis_feature_title = get_field('indianapolis_feature_title');
-$indianapolis_feature_body = get_field('indianapolis_feature_body');
-$social_media_image = get_field('social_media_image');
-$social_media_title = get_field('social_media_title');
-$social_media_feature_body = get_field('social_media_feature_body');
+$indianapolis_feature_body  = get_field('indianapolis_feature_body');
+$social_media_image         = get_field('social_media_image');
+$social_media_title         = get_field('social_media_title');
+$social_media_feature_body  = get_field('social_media_feature_body');
 
 ?>
 
@@ -93,23 +93,26 @@ $social_media_feature_body = get_field('social_media_feature_body');
     <!-- <div class="container marketing"> -->
 
       <!-- Three columns of text below the carousel -->
-      <section class="row content-region-1 pt40 pb40">
+      <section id="image-features">
         <div class="container">
-          
+          <div class="row">
           <?php $loop = new WP_Query(array('post_type' => 'images_feature','orderby' => 'post_id', 'order' => 'ASC')); ?>
           <?php while($loop->have_posts()) : $loop->the_post(); ?>
-          <div class="col-xl-2 col-centered">
-            <?php
-              if (has_post_thumbnail()) {
-                the_post_thumbnail();
-              }
-            ?>
-            <p><a href="#" class="link"><?php the_title(); ?> &raquo;</a></p>
-
-          <?php endwhile; ?>
-          </div><!-- /.col-lg-2 -->
-          
-        </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <?php
+                  if (has_post_thumbnail()) {
+                    the_post_thumbnail('thumbnail', array('class' => 'alignleft'));
+                  }
+                ?>
+                <div class="caption">
+                  <h3><a href="#" class="link"><?php the_title(); ?> &raquo;</a></h3>
+                </div>
+              </div>
+            </div>  
+            <?php endwhile; ?>
+          </div>
+        </div>      
       </section><!-- /.row -->
 
 
@@ -128,14 +131,23 @@ $social_media_feature_body = get_field('social_media_feature_body');
         </div>
       </section>
 
-
+     <!-- Testimonial Section
+    ================================================== -->
       <section class="row content-region-2 pt40 pb40" id="customer-testimonial">
         <div class="container">
           <div class="col-md-12">
               <h1>What Our Customers Are Saying...</h1>
-              <p class="lead">We love Mirror Concepts! The team is professional and courteous and the new weightroom
-              mirrors look awesome!</p>
-              <cite>~ Jeff and Cindy Kivett</cite>
+
+              <?php $loop = new WP_Query(array('post_type' => 'testimonial','orderby' => 'post_id', 'order' => 'ASC')); ?>
+              <?php while($loop->have_posts()) : $loop->the_post(); ?>
+
+                <p class="lead">We love Mirror Concepts! The team is professional and courteous and the new weightroom
+                  mirrors look awesome!</p>
+                <cite>~ Jeff and Cindy Kivett</cite>
+
+              <?php endwhile; ?>
+
+              
               <p><a href="#" id="gallery">Read More &raquo;</a></p>
             </div>
           </div>
