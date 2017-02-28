@@ -36,6 +36,12 @@
               </div><!-- navbar-header -->
 
 
+
+
+                <h3><a href="#" class="showroom">Showroom 317.843-1204</a></h3>
+               
+
+
              <!--  We cannot leave the below as-is, we need to set the menu in the WordPress dashboard -->
               <?php
 

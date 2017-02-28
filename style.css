@@ -27,6 +27,25 @@ h1,h2,h3,h4,h5,h6 {
   border: none;
 }
 
+.thumbnail img {
+  border-radius: 10px;
+}
+
+#social-media {
+  background: white;
+}
+
+img {
+  position: relative;
+}
+
+.social-media {
+  position: absolute;
+  bottom: 60px;
+  right: 90px;
+  left: 90px;
+}
+
 a {
   color: #000000;
 }
@@ -46,6 +65,14 @@ a#gallery {
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;
+}
+
+.col-md-12 {
+  text-align: center;
+}
+
+.showroom {
+  padding-left: 70px;
 }
 
 .badge.social.twitter {
@@ -140,6 +167,18 @@ a.btn-default:hover {
 
 #indy-glass {
   background: white;
+}
+
+#social-media-features {
+  background: white;
+}
+
+.caption {
+  text-align: center;
+}
+
+.col-lg-4 {
+  text-align: center;
 }
 
 .footer {

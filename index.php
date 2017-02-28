@@ -102,14 +102,14 @@ $social_media_feature_body  = get_field('social_media_feature_body');
               <div class="thumbnail">
                 <?php
                   if (has_post_thumbnail()) {
-                    the_post_thumbnail('thumbnail', array('class' => 'alignleft'));
+                    the_post_thumbnail();
                   }
                 ?>
                 <div class="caption">
                   <h3><a href="#" class="link"><?php the_title(); ?> &raquo;</a></h3>
                 </div>
               </div>
-            </div>  
+            </div><!-- .col-sm-6 -->  
             <?php endwhile; ?>
           </div>
         </div>      
@@ -156,32 +156,36 @@ $social_media_feature_body  = get_field('social_media_feature_body');
 
       <!-- Social Media Section
     ================================================== -->
-      <section class="row content-region-3 pt40 pb40" id="indy-glass">
+      <section id="social-media-features">
         <div class="container">
-          <div class="col-md-12 facebook-page">
-
+          <div class="col-md-12">
             <!-- If user uploaded an image -->
             <?php if(!empty($social_media_image)) : ?>
 
               <img src="<?php echo $social_media_image['url']; ?>" alt="<?php echo $social_media_image['alt']; ?>">
 
             <?php endif; ?>
-            
+              <h2 class="social-media"><?php echo $social_media_title; ?></h2>
           </div>
-              <h2><?php echo $social_media_title; ?></h2>
+            
               <hr />
-              <?php $loop = new WP_Query(array('post_type' => 'social_media_feature','orderby' => 'post_id', 'order' => 'ASC')); ?>
-              <?php while($loop->have_posts()) : $loop->the_post(); ?>
-              <div class="col-lg-2 col-centered">
-                <?php
-                  if (has_post_thumbnail()) {
-                    the_post_thumbnail();
-                  }
-                ?>
-              <?php endwhile; ?>
-              </div><!-- /.col-lg-2 -->
-              
-              <p><a href="#" class="link">See more on Facebook &raquo;</a></p>
+              <div class="row">
+                <?php $loop = new WP_Query(array('post_type' => 'social_media_feature','orderby' => 'post_id', 'order' => 'ASC')); ?>
+                <?php while($loop->have_posts()) : $loop->the_post(); ?>
+                <div class="col-sm-6 col-md-3">
+                  <div class="thumbnail" id="social-media">
+                    <?php
+                    if (has_post_thumbnail()) {
+                      the_post_thumbnail();
+                    }
+                  ?>
+                  </div>  
+                </div><!-- /.col-lg-2 --> 
+                <?php endwhile; ?>
+                <div class="caption">
+                  <h3><a href="#" class="link">See more on Facebook &raquo;</a></h3>
+                </div> 
+              </div>
           </div>
       </section>
 

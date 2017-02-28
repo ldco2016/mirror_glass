@@ -1,7 +1,7 @@
  <!-- FOOTER -->
       <footer class="footer content-region-4 pt30 pb40">
         <div class="container">
-          <div class="col-lg-4 col-centered">
+          <div class="col-lg-12">
           
               <a href="https://twitter.com/<?php echo $twitter_username; ?>" target="_blank" class="badge social twitter"><i class="fa fa-twitter"></i></a>
            
