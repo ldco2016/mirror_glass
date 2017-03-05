@@ -3,11 +3,9 @@
         <div class="container">
           <div class="col-lg-12">
           
-              <a href="https://twitter.com/<?php echo $twitter_username; ?>" target="_blank" class="badge social twitter"><i class="fa fa-twitter"></i></a>
-           
-              <a href="https://pinterest.com/<?php echo $pinterest_username; ?>" target="_blank" class="badge social pinterest"><i class="fa fa-pinterest"></i></a>
-           
-              <a href="https://facebook.com/<?php echo $facebook_username; ?>" target="_blank" class="badge social facebook"><i class="fa fa-facebook"></i></a>
+             <a href="https://twitter.com" target="_blank" class="badge social twitter"><i class="fa fa-twitter"></i></a>
+             <a href="https://pinterest.com" target="_blank" class="badge social pinterest"><i class="fa fa-pinterest"></i></a>
+             <a href="https://facebook.com" target="_blank" class="badge social facebook"><i class="fa fa-facebook"></i></a>
             
           </div>
             <div class="col-md-12">
@@ -20,5 +18,6 @@
 
 <?php wp_footer(); ?>
 
+ <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   </body>
 </html>

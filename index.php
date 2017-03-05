@@ -99,14 +99,14 @@ $social_media_feature_body  = get_field('social_media_feature_body');
           <?php $loop = new WP_Query(array('post_type' => 'images_feature','orderby' => 'post_id', 'order' => 'ASC')); ?>
           <?php while($loop->have_posts()) : $loop->the_post(); ?>
             <div class="col-sm-6 col-md-4">
-              <div class="thumbnail">
+              <div class="thumbnail" id="three-images">
                 <?php
                   if (has_post_thumbnail()) {
                     the_post_thumbnail();
                   }
                 ?>
                 <div class="caption">
-                  <h3><a href="#" class="link"><?php the_title(); ?> &raquo;</a></h3>
+                  <h3><a href="#" class="link"><?php the_title(); ?> &rsaquo;</a></h3>
                 </div>
               </div>
             </div><!-- .col-sm-6 -->  
@@ -126,7 +126,7 @@ $social_media_feature_body  = get_field('social_media_feature_body');
               <p class="lead"><?php echo $indianapolis_feature_body; ?></p>
           </div>
           <div class="col-md-12 text-center">
-            <p><a class="btn btn-danger" href="#" role="button">Learn More &raquo;</a></p>
+            <p><a class="btn btn-danger" href="#" role="button">Learn More &rsaquo;</a></p>
           </div>
         </div>
       </section>
@@ -148,7 +148,7 @@ $social_media_feature_body  = get_field('social_media_feature_body');
               <?php endwhile; ?>
 
               
-              <p><a href="#" id="gallery">Read More &raquo;</a></p>
+              <p><a href="#" id="gallery">Read More &rsaquo;</a></p>
             </div>
           </div>
       </section>
@@ -168,12 +168,14 @@ $social_media_feature_body  = get_field('social_media_feature_body');
               <h2 class="social-media"><?php echo $social_media_title; ?></h2>
           </div>
             
-              <hr />
-              <div class="row">
+              
+              <div class="row" id="facebook-link">
                 <?php $loop = new WP_Query(array('post_type' => 'social_media_feature','orderby' => 'post_id', 'order' => 'ASC')); ?>
                 <?php while($loop->have_posts()) : $loop->the_post(); ?>
                 <div class="col-sm-6 col-md-3">
+
                   <div class="thumbnail" id="social-media">
+
                     <?php
                     if (has_post_thumbnail()) {
                       the_post_thumbnail();
@@ -183,7 +185,7 @@ $social_media_feature_body  = get_field('social_media_feature_body');
                 </div><!-- /.col-lg-2 --> 
                 <?php endwhile; ?>
                 <div class="caption">
-                  <h3><a href="#" class="link">See more on Facebook &raquo;</a></h3>
+                  <h3><a href="#" class="link">See more on Facebook &rsaquo;</a></h3>
                 </div> 
               </div>
           </div>
