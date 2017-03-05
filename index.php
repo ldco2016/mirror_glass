@@ -62,7 +62,7 @@ $social_media_feature_body  = get_field('social_media_feature_body');
             <div class="carousel-image">
              <?php the_post_thumbnail(); ?>
              <div class="carousel-caption">
-               <h1><?php the_title(); ?></h1>
+               <h1 class="carousel-title"><?php the_title(); ?></h1>
                <h2><?php the_content(); ?></h2>
              </div>
             </div>
@@ -106,7 +106,7 @@ $social_media_feature_body  = get_field('social_media_feature_body');
                   }
                 ?>
                 <div class="caption">
-                  <h3><a href="#" class="link"><?php the_title(); ?> &rsaquo;</a></h3>
+                  <h4><a href="#" class="link"><?php the_title(); ?> ></a></h4>
                 </div>
               </div>
             </div><!-- .col-sm-6 -->  
@@ -126,7 +126,7 @@ $social_media_feature_body  = get_field('social_media_feature_body');
               <p class="lead"><?php echo $indianapolis_feature_body; ?></p>
           </div>
           <div class="col-md-12 text-center">
-            <p><a class="btn btn-danger" href="#" role="button">Learn More &rsaquo;</a></p>
+            <p><a class="btn btn-danger" href="#" role="button">Learn More ></a></p>
           </div>
         </div>
       </section>
@@ -148,7 +148,7 @@ $social_media_feature_body  = get_field('social_media_feature_body');
               <?php endwhile; ?>
 
               
-              <p><a href="#" id="gallery">Read More &rsaquo;</a></p>
+              <p><a href="#" id="gallery">Read more ></a></p>
             </div>
           </div>
       </section>
@@ -165,6 +165,7 @@ $social_media_feature_body  = get_field('social_media_feature_body');
               <img src="<?php echo $social_media_image['url']; ?>" alt="<?php echo $social_media_image['alt']; ?>">
 
             <?php endif; ?>
+            <hr />
               <h2 class="social-media"><?php echo $social_media_title; ?></h2>
           </div>
             
@@ -184,11 +185,9 @@ $social_media_feature_body  = get_field('social_media_feature_body');
                   </div>  
                 </div><!-- /.col-lg-2 --> 
                 <?php endwhile; ?>
-                <div class="caption">
-                  <h3><a href="#" class="link">See more on Facebook &rsaquo;</a></h3>
-                </div> 
+                <h4><a href="#" class="link">See more on Facebook ></a></h4>
               </div>
-          </div>
+        </div>
       </section>
 
 <?php get_footer(); ?>

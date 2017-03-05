@@ -7,40 +7,89 @@
 */
 
 
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
+/* GENERAL STYLES
+================== */
 
 body {
   background: url('/wp-content/themes/mirror_glass/assets/img/tile.jpg') top left repeat;
 }
 
+/* GLOBAL STYLES
+================== */
+
+
+
 @font-face {
   font-family: Museo Std 700;
   src: url(Museo700-Regular.ttf);
+  font-family: AS Grammatika Light;
+  src: url(as_grammatika-light-webfont.ttf);
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h5,h6 {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-weight: bold;
   font-family: "Museo Std 700", sans-serif;
 }
 
+.carousel-title {
+  margin: 0 -9999rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  font-family: "AS Grammatika Light", sans-serif;
+}
+
+h4 {
+  font-weight: bold;
+  font-family: "Museo Std 700", sans-serif;
+  text-align: center;
+}
+
+p.lead {
+  margin: 0;
+}
+
+hr {
+  margin-bottom: 0 !important;
+}
+
+a.link {
+  font-size: 20px;
+  line-height: 90px;
+}
+
 .thumbnail {
   background: url('/wp-content/themes/mirror_glass/assets/img/tile.jpg');
   border: none;
+  padding: 0 !important;
+  margin-top: -20px;
 }
 
 #facebook-link {
   margin-bottom: 75px;
 }
 
+.carousel-image {
+    margin: 0 auto;
+}
+
+.container {
+  max-width: 1020px;
+}
+
+#image-features {
+  text-align: center;
+  border-top: 12px solid white;
+}
+
 .thumbnail img {
   border-radius: 10px;
   height: 190px;
   width: 290px;
-  margin-top: 55px;
+  margin-top: 80px;
 }
 
 #social-media {
@@ -57,18 +106,13 @@ img {
 
 .social-media {
   position: absolute;
-  bottom: 10px;
+  bottom: 25px;
   right: 90px;
   left: 90px;
 }
 
 a {
   color: #000000;
-}
-
-a#gallery {
-  color: white;
-  font-size: 24px;
 }
 
 .badge.social {
@@ -114,30 +158,19 @@ a#gallery {
   text-align: center;
 }
 
-.btn-danger {
-  padding: 10px 20px;
-  margin-bottom: 10px;
-  font-size: 20px;
-  border-radius: 10px;
-}
-
 .btn-default {
   border: none;
   background-color: transparent;
   font-size: 24px;
 }
 
-.container {
-  max-width: 1020px;
-}
-
-#image-features {
-  text-align: center;
-}
-
 .navbar-default {
     background-color: white;
     margin-bottom: 0;
+}
+
+.navbar-collapse {
+  font-size: 20px;
 }
 
 .header {
@@ -151,16 +184,23 @@ a#gallery {
   line-height: 40px;
 }
 
-.carousel-image {
-    margin: 0 auto;
+cite {
+  font-size: 12px;
 }
 
-p {
-  margin-top: 4px;
+a#gallery {
+  color: white;
+  font-size: 24px;
+  line-height: 4 !important;
 }
 
-a.link {
+.btn-danger {
+  padding: 10px 32px;
+  margin-bottom: 30px;
+  margin-top: 30px;
   font-size: 20px;
+  border-radius: 10px;
+  background-color: #cb2027;
 }
 
 a:hover {
@@ -225,4 +265,23 @@ a.btn-default:hover {
   .img-rounded {
      margin: 12px;
   }
+
+  .showroom {
+     padding-left: 210px;
+  }
 }
+
+@media screen and (max-width: 568px) {
+  .showroom {
+    padding-left: 40px;
+  }
+
+  .social-media {
+    position: absolute;
+    bottom: 25px;
+    right: 0;
+    left: 0;
+  }
+}
+
+
