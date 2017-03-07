@@ -106,7 +106,7 @@ $social_media_feature_body  = get_field('social_media_feature_body');
                   }
                 ?>
                 <div class="caption">
-                  <h4><a href="#" class="link"><?php the_title(); ?> ></a></h4>
+                  <h4><a href="#" class="link" id="image-feature-title"><?php the_title(); ?> ></a></h4>
                 </div>
               </div>
             </div><!-- .col-sm-6 -->  
@@ -122,11 +122,11 @@ $social_media_feature_body  = get_field('social_media_feature_body');
         <div class="container">
           <div class="col-md-12">
               <h2><?php echo $indianapolis_feature_title; ?></h2>
-              <hr />
+              <hr /><br>
               <p class="lead"><?php echo $indianapolis_feature_body; ?></p>
           </div>
           <div class="col-md-12 text-center">
-            <p><a class="btn btn-danger" href="#" role="button">Learn More ></a></p>
+            <p><a class="btn btn-danger" href="#" role="button">Learn more ></a></p>
           </div>
         </div>
       </section>
@@ -136,7 +136,7 @@ $social_media_feature_body  = get_field('social_media_feature_body');
       <section class="row content-region-2 pt40 pb40" id="customer-testimonial">
         <div class="container">
           <div class="col-md-12">
-              <h1>What Our Customers Are Saying...</h1>
+              <h2>What Our Customers Are Saying...</h2>
 
               <?php $loop = new WP_Query(array('post_type' => 'testimonial','orderby' => 'post_id', 'order' => 'ASC')); ?>
               <?php while($loop->have_posts()) : $loop->the_post(); ?>
@@ -185,9 +185,10 @@ $social_media_feature_body  = get_field('social_media_feature_body');
                   </div>  
                 </div><!-- /.col-lg-2 --> 
                 <?php endwhile; ?>
-                <h4><a href="#" class="link">See more on Facebook ></a></h4>
+                
               </div>
         </div>
+        <h4><a href="#" id="target">See more on Facebook ></a></h4>
       </section>
 
 <?php get_footer(); ?>
